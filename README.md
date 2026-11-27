@@ -16,13 +16,6 @@ tienda-hardware/
         └── WEB-INF/jsp/   catalogo, producto, pagar, confirmacion, admin/*
 ```
 
-## Cómo ejecutarlo
-1. Ejecuta `base_datos/schema.sql` en tu servidor (Workbench o consola).
-2. Si no usas el usuario `tienda_app`, cambia usuario/clave en `dao/Conexion.java`.
-3. Compila: `mvn clean package` (genera `target/tienda.war`).
-4. Copia `tienda.war` a la carpeta `webapps` de **Tomcat 10.1** y arráncalo.
-5. Abre `http://localhost:8080/tienda/`
-
 ## Página principal y archivos originales
 - La página principal ahora es `WEB-INF/jsp/inicio.jsp`, servida por `InicioServlet` en `/inicio`.
 - `index.jsp` redirige automáticamente a `/inicio`.
