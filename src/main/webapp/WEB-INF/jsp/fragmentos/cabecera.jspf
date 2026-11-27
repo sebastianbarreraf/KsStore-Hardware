@@ -1,0 +1,28 @@
+<%-- Cabecera común. La página que la incluye debe declarar antes el taglib "c" y la variable "titulo". --%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><c:out value="${titulo}"/> | KsStore</title>
+  <link rel="stylesheet" href="${ctx}/css/ksstore.css?v=20261127">
+</head>
+<body>
+<div class="topbar">🚚 Envíos a toda Colombia &nbsp;·&nbsp; Compra segura</div>
+<header class="header">
+  <div class="contenedor">
+    <a href="${ctx}/inicio" class="logo" aria-label="KsStore, inicio">Ks<span>Store</span></a>
+    <form class="buscador" action="${ctx}/productos" method="get" role="search">
+      <input type="search" name="q" value="<c:out value='${param.q}'/>" placeholder="Busca procesadores, tarjetas de video, RAM..." aria-label="Buscar productos">
+      <button type="submit">Buscar</button>
+    </form>
+    <nav class="acciones" aria-label="Navegación principal">
+      <a href="${ctx}/inicio">⌂ <span class="txt">Inicio</span></a>
+      <a href="${ctx}/productos">▦ <span class="txt">Catálogo</span></a>
+      <a href="${ctx}/admin/productos">⚙ <span class="txt">Admin</span></a>
+    </nav>
+  </div>
+</header>
+<%-- Portada (ancha=true): <main> a todo el ancho. Resto de páginas: contenido dentro del contenedor. --%>
+<main class="${ancha ? 'pagina-ancha' : 'contenedor pagina'}">

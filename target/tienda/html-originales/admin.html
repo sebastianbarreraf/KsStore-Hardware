@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionar objetos | TechStore</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/paginas.css">
+</head>
+<body>
+<div class="topbar">🚚 Envíos a toda Colombia &nbsp;·&nbsp; Usa el cupón <strong>BIENVENIDO10</strong> y obtén 10% de descuento</div>
+<header class="header"><div class="contenedor">
+  <a href="../" class="logo">Tech<span>Store</span></a>
+  <form class="buscador" action="../productos" method="get" role="search">
+    <input type="search" name="q" placeholder="Busca procesadores, tarjetas de video, RAM..." aria-label="Buscar productos">
+    <button type="submit">Buscar</button>
+  </form>
+  <nav class="acciones">
+    <a href="../productos">📦 <span class="txt">Objetos</span></a>
+    <a href="../admin/productos">⚙️ <span class="txt">Gestionar objetos</span></a>
+    <a href="../pagar">🛒 <span class="txt">Carrito</span><span class="badge-carrito" id="contador">0</span></a>
+  </nav>
+</div></header>
+<nav class="nav-cat" aria-label="Categorías"><div class="contenedor"><ul>
+  <li><a href="productos.html?cat=1">Procesadores</a></li>
+  <li><a href="productos.html?cat=2">Tarjetas de video</a></li>
+  <li><a href="productos.html?cat=3">Memoria RAM</a></li>
+  <li><a href="productos.html?cat=4">Almacenamiento</a></li>
+  <li><a href="productos.html?cat=5">Tarjetas madre</a></li>
+  <li><a href="productos.html?cat=6">Fuentes de poder</a></li>
+  <li><a href="productos.html?cat=7">Gabinetes</a></li>
+  <li><a href="productos.html?cat=8">Refrigeración</a></li>
+  <li><a href="productos.html?cat=9">Periféricos</a></li>
+</ul></div></nav>
+<main class="contenedor pagina">
+  <div class="migas"><a href="../">Inicio</a><span>›</span>Gestionar objetos</div>
+  <h1 class="titulo-pagina">Gestión de objetos</h1>
+
+  <div class="layout-2">
+    <section class="tarjeta">
+      <h3 style="margin-bottom:14px;">Objetos en el catálogo</h3>
+      <table class="tabla-specs">
+        <tbody id="tabla-admin"></tbody>
+      </table>
+    </section>
+
+    <aside class="tarjeta resumen">
+      <h3 id="admin-titulo-form" style="margin-bottom:14px;">Crear nuevo objeto</h3>
+      <form id="form-admin">
+        <input type="hidden" id="prod-id">
+        <div class="campo"><label for="prod-nombre">Nombre del objeto</label><input id="prod-nombre" placeholder="Ej: Ryzen 7 7800X3D" required></div>
+        <div class="fila-2">
+          <div class="campo"><label for="prod-marca">Marca</label><input id="prod-marca" placeholder="Ej: AMD" required></div>
+          <div class="campo"><label for="prod-cat">Categoría</label>
+            <select id="prod-cat">
+              <option value="1">Procesadores</option>
+              <option value="2">Tarjetas de video</option>
+              <option value="3">Memoria RAM</option>
+              <option value="4">Almacenamiento</option>
+              <option value="5">Tarjetas madre</option>
+              <option value="6">Fuentes de poder</option>
+              <option value="7">Gabinetes</option>
+              <option value="8">Refrigeración</option>
+              <option value="9">Periféricos</option>
+            </select>
+          </div>
+        </div>
+        <div class="fila-2">
+          <div class="campo"><label for="prod-precio">Precio (COP)</label><input id="prod-precio" type="number" min="1000" step="1000" placeholder="850000" required></div>
+          <div class="campo"><label for="prod-stock">Stock</label><input id="prod-stock" type="number" min="0" value="10" required></div>
+        </div>
+        <div class="fila-2">
+          <div class="campo"><label for="prod-icono">Ícono (Emoji)</label><input id="prod-icono" value="🖥️" maxlength="4"></div>
+          <div class="campo"><label for="prod-chips">Etiquetas (separadas por coma)</label><input id="prod-chips" placeholder="8 núcleos, AM5, DDR5"></div>
+        </div>
+        <div class="campo"><label for="prod-desc">Descripción</label><input id="prod-desc" placeholder="Breve descripción del producto"></div>
+        <button class="btn btn-primario btn-block" style="border:0;" type="submit">Guardar objeto</button>
+        <button class="btn btn-claro btn-block oculto" id="btn-cancelar-edit" style="margin-top:8px;" type="button">Cancelar edición</button>
+      </form>
+    </aside>
+  </div>
+</main>
+<footer class="footer"><div class="contenedor">
+  <div class="footer-grid">
+    <div><a href="../" class="logo">Tech<span>Store</span></a>
+      <p style="margin-top:10px;font-size:.9rem">Tu tienda de confianza para hardware y componentes de computadores en Colombia.</p></div>
+    <div><h4>Tienda</h4><ul><li><a href="../productos">Catálogo</a></li><li><a href="../admin/productos">Gestionar objetos</a></li><li><a href="../pagar">Carrito</a></li></ul></div>
+    <div><h4>Contacto</h4><ul><li>📍 Medellín, Antioquia</li><li>✉️ contacto@techstore.co</li><li>📞 (604) 000 0000</li></ul></div>
+  </div>
+  <p class="footer-copy">© 2026 TechStore. Todos los derechos reservados.</p>
+</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../js/app.js"></script>
+</body>
+</html>

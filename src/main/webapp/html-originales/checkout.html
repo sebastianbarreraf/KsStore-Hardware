@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar compra | TechStore</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/paginas.css">
+</head>
+<body>
+<div class="topbar">🚚 Envíos a toda Colombia &nbsp;·&nbsp; Usa el cupón <strong>BIENVENIDO10</strong> y obtén 10% de descuento</div>
+<header class="header"><div class="contenedor">
+  <a href="../" class="logo">Tech<span>Store</span></a>
+  <form class="buscador" action="../productos" method="get" role="search">
+    <input type="search" name="q" placeholder="Busca procesadores, tarjetas de video, RAM..." aria-label="Buscar productos">
+    <button type="submit">Buscar</button>
+  </form>
+  <nav class="acciones">
+    <a href="../productos">📦 <span class="txt">Objetos</span></a>
+    <a href="../admin/productos">⚙️ <span class="txt">Gestionar objetos</span></a>
+    <a href="../pagar">🛒 <span class="txt">Carrito</span><span class="badge-carrito" id="contador">0</span></a>
+  </nav>
+</div></header>
+<nav class="nav-cat" aria-label="Categorías"><div class="contenedor"><ul>
+  <li><a href="productos.html?cat=1">Procesadores</a></li>
+  <li><a href="productos.html?cat=2">Tarjetas de video</a></li>
+  <li><a href="productos.html?cat=3">Memoria RAM</a></li>
+  <li><a href="productos.html?cat=4">Almacenamiento</a></li>
+  <li><a href="productos.html?cat=5">Tarjetas madre</a></li>
+  <li><a href="productos.html?cat=6">Fuentes de poder</a></li>
+  <li><a href="productos.html?cat=7">Gabinetes</a></li>
+  <li><a href="productos.html?cat=8">Refrigeración</a></li>
+  <li><a href="productos.html?cat=9">Periféricos</a></li>
+</ul></div></nav>
+<main class="contenedor pagina">
+<div class="migas"><a href="../">Inicio</a><span>›</span><a href="../pagar">Carrito</a><span>›</span>Finalizar compra</div>
+<h1 class="titulo-pagina">Finalizar compra</h1>
+<form class="layout-2" id="form-checkout">
+  <div>
+    <section class="tarjeta" style="margin-bottom:20px"><h3 style="margin-bottom:14px">1. Datos y dirección de envío</h3>
+      <div class="campo"><label for="nombre-cliente">Nombre completo</label><input id="nombre-cliente" placeholder="Ej: Juan Pérez" required></div>
+      <div class="campo"><label for="dir">Dirección de entrega</label><input id="dir" placeholder="Calle 50 # 40-20" required></div>
+      <div class="fila-2">
+        <div class="campo"><label for="ciudad">Ciudad</label><input id="ciudad" value="Medellín" required></div>
+        <div class="campo"><label for="tel">Teléfono de contacto</label><input id="tel" type="tel" placeholder="300 000 0000" required></div>
+      </div>
+      <div class="campo"><label for="notas">Notas para la entrega (opcional)</label><input id="notas" placeholder="Ej: dejar en portería"></div>
+    </section>
+    <section class="tarjeta"><h3 style="margin-bottom:14px">2. Método de pago</h3>
+      <label class="opcion-pago"><input type="radio" name="metodo" value="TARJETA_CREDITO" checked><span class="icono">💳</span>Tarjeta de crédito</label>
+      <label class="opcion-pago"><input type="radio" name="metodo" value="TARJETA_DEBITO"><span class="icono">💳</span>Tarjeta débito</label>
+      <label class="opcion-pago"><input type="radio" name="metodo" value="PSE"><span class="icono">🏦</span>PSE</label>
+      <label class="opcion-pago"><input type="radio" name="metodo" value="NEQUI"><span class="icono">📱</span>Nequi</label>
+      <label class="opcion-pago"><input type="radio" name="metodo" value="TRANSFERENCIA"><span class="icono">🔁</span>Transferencia bancaria</label>
+    </section>
+  </div>
+  <aside class="tarjeta resumen" id="resumen-checkout"></aside>
+</form>
+</main>
+<footer class="footer"><div class="contenedor">
+  <div class="footer-grid">
+    <div><a href="../" class="logo">Tech<span>Store</span></a>
+      <p style="margin-top:10px;font-size:.9rem">Tu tienda de confianza para hardware y componentes de computadores en Colombia.</p></div>
+    <div><h4>Tienda</h4><ul><li><a href="../productos">Catálogo</a></li><li><a href="../admin/productos">Gestionar objetos</a></li><li><a href="../pagar">Carrito</a></li></ul></div>
+    <div><h4>Contacto</h4><ul><li>📍 Medellín, Antioquia</li><li>✉️ contacto@techstore.co</li><li>📞 (604) 000 0000</li></ul></div>
+  </div>
+  <p class="footer-copy">© 2026 TechStore. Todos los derechos reservados.</p>
+</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../js/app.js"></script>
+</body>
+</html>

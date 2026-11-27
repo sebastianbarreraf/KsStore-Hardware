@@ -1,0 +1,15 @@
+com\techstore\modelo\Producto.class
+com\techstore\dao\ProductoDAO.class
+com\techstore\modelo\Marca.class
+com\techstore\servlet\AdminProductoServlet.class
+com\techstore\modelo\Pedido.class
+com\techstore\dao\Conexion.class
+com\techstore\dao\PedidoDAO.class
+com\techstore\servlet\ProductoServlet.class
+com\techstore\servlet\CatalogoServlet.class
+com\techstore\dao\CatalogoDAO.class
+com\techstore\servlet\InicioServlet.class
+com\techstore\servlet\EncodingFilter.class
+com\techstore\modelo\Categoria.class
+com\techstore\util\Util.class
+com\techstore\servlet\CompraServlet.class

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito | TechStore</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/paginas.css">
+</head>
+<body>
+<div class="topbar">🚚 Envíos a toda Colombia &nbsp;·&nbsp; Usa el cupón <strong>BIENVENIDO10</strong> y obtén 10% de descuento</div>
+<header class="header"><div class="contenedor">
+  <a href="../" class="logo">Tech<span>Store</span></a>
+  <form class="buscador" action="../productos" method="get" role="search">
+    <input type="search" name="q" placeholder="Busca procesadores, tarjetas de video, RAM..." aria-label="Buscar productos">
+    <button type="submit">Buscar</button>
+  </form>
+  <nav class="acciones">
+    <a href="../productos">📦 <span class="txt">Objetos</span></a>
+    <a href="../admin/productos">⚙️ <span class="txt">Gestionar objetos</span></a>
+    <a href="../pagar">🛒 <span class="txt">Carrito</span><span class="badge-carrito" id="contador">0</span></a>
+  </nav>
+</div></header>
+<nav class="nav-cat" aria-label="Categorías"><div class="contenedor"><ul>
+  <li><a href="productos.html?cat=1">Procesadores</a></li>
+  <li><a href="productos.html?cat=2">Tarjetas de video</a></li>
+  <li><a href="productos.html?cat=3">Memoria RAM</a></li>
+  <li><a href="productos.html?cat=4">Almacenamiento</a></li>
+  <li><a href="productos.html?cat=5">Tarjetas madre</a></li>
+  <li><a href="productos.html?cat=6">Fuentes de poder</a></li>
+  <li><a href="productos.html?cat=7">Gabinetes</a></li>
+  <li><a href="productos.html?cat=8">Refrigeración</a></li>
+  <li><a href="productos.html?cat=9">Periféricos</a></li>
+</ul></div></nav>
+<main class="contenedor pagina">
+<div class="migas"><a href="../">Inicio</a><span>›</span>Carrito</div>
+<h1 class="titulo-pagina">Tu carrito</h1>
+<div class="vacio oculto" id="carrito-vacio"><span class="icono">🛒</span><h3>Tu carrito está vacío</h3><p>Explora el catálogo y agrega tus componentes.</p><br><a href="../productos" class="btn btn-primario">Ir al catálogo</a></div>
+<div class="layout-2" id="carrito-contenido">
+  <section id="carrito"></section>
+  <aside class="tarjeta resumen">
+    <h3>Resumen del pedido</h3>
+    <div class="cupon"><input id="cupon" placeholder="Código de cupón"><button id="btn-cupon" type="button">Aplicar</button></div>
+    <div class="msg-cupon" id="msg-cupon"></div>
+    <div class="linea"><span>Subtotal</span><span id="r-sub"></span></div>
+    <div class="linea"><span>Descuento</span><span id="r-desc"></span></div>
+    <div class="linea"><span>Envío</span><span class="ok" id="r-envio"></span></div>
+    <div class="linea total"><span>Total</span><span id="r-total"></span></div>
+    <p style="font-size:.8rem;color:var(--muted);margin:10px 0 16px">Envío gratis en compras desde $500.000.</p>
+    <a href="../pagar" class="btn btn-primario btn-block">Finalizar compra</a>
+    <a href="../productos" class="btn btn-claro btn-block" style="margin-top:10px">Seguir comprando</a>
+  </aside>
+</div>
+</main>
+<footer class="footer"><div class="contenedor">
+  <div class="footer-grid">
+    <div><a href="../" class="logo">Tech<span>Store</span></a>
+      <p style="margin-top:10px;font-size:.9rem">Tu tienda de confianza para hardware y componentes de computadores en Colombia.</p></div>
+    <div><h4>Tienda</h4><ul><li><a href="../productos">Catálogo</a></li><li><a href="../admin/productos">Gestionar objetos</a></li><li><a href="../pagar">Carrito</a></li></ul></div>
+    <div><h4>Contacto</h4><ul><li>📍 Medellín, Antioquia</li><li>✉️ contacto@techstore.co</li><li>📞 (604) 000 0000</li></ul></div>
+  </div>
+  <p class="footer-copy">© 2026 TechStore. Todos los derechos reservados.</p>
+</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../js/app.js"></script>
+</body>
+</html>

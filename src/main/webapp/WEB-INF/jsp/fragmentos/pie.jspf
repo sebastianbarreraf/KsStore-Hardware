@@ -1,0 +1,16 @@
+</main>
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div><a href="${ctx}/inicio" class="logo">Ks<span>Store</span></a>
+        <p style="margin-top:10px;font-size:.9rem">Tu próximo PC comienza aquí. Componentes y periféricos para llevar tu setup al siguiente nivel.</p></div>
+      <div><h4>Tienda</h4><ul><li><a href="${ctx}/productos">Catálogo</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li>📍 Medellín, Antioquia</li><li>Atención al cliente</li></ul></div>
+      <div><h4>Gestión</h4><ul><li><a href="${ctx}/admin/productos">Administrar productos</a></li></ul></div>
+    </div>
+    <p class="footer-copy">© 2026 KsStore. Tecnología para tu setup.</p>
+  </div>
+</footer>
+<script src="${ctx}/js/app.js"></script>
+</body>
+</html>

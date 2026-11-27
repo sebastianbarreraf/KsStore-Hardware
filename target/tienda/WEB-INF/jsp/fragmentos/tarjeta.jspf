@@ -1,0 +1,32 @@
+<article class="producto">
+  <c:choose>
+    <c:when test="${p.agotado}"><span class="etiqueta-prod">Agotado</span></c:when>
+    <c:when test="${p.stockBajo}"><span class="etiqueta-prod">¡Últimas unidades!</span></c:when>
+  </c:choose>
+  <a href="${ctx}/producto?id=${p.id}" class="producto-img">
+    <c:choose>
+      <c:when test="${not empty p.imagenUrl}">
+        <img src="<c:url value='${p.imagenUrl}'/>" alt="<c:out value='${p.nombre}'/>">
+      </c:when>
+      <c:otherwise><c:out value="${p.icono}"/></c:otherwise>
+    </c:choose>
+  </a>
+  <div class="producto-info">
+    <span class="marca"><c:out value="${p.marca}"/></span>
+    <h3><a href="${ctx}/producto?id=${p.id}"><c:out value="${p.nombre}"/></a></h3>
+    <div class="precio-fila">
+      <div class="precio"><c:out value="${p.precioTxt}"/></div>
+      <div class="stock ${p.agotado or p.stockBajo ? 'bajo' : ''}">
+        <c:choose>
+          <c:when test="${p.agotado}">Sin stock</c:when>
+          <c:when test="${p.stockBajo}">Quedan ${p.stock}</c:when>
+          <c:otherwise>Disponible</c:otherwise>
+        </c:choose>
+      </div>
+      <c:choose>
+        <c:when test="${p.agotado}"><span class="btn-agregar deshabilitado">Sin stock</span></c:when>
+        <c:otherwise><a class="btn-agregar" href="${ctx}/pagar?id=${p.id}">Comprar ahora</a></c:otherwise>
+      </c:choose>
+    </div>
+  </div>
+</article>

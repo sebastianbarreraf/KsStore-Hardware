@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KsStore | Hardware y componentes para PC</title>
+  <meta name="description" content="Procesadores, tarjetas de video, memoria RAM, almacenamiento y más. Envíos a toda Colombia.">
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <div class="topbar">
+    🚚 Envíos a toda Colombia &nbsp;·&nbsp; Usa el cupón <strong>BIENVENIDO10</strong> y obtén 10% de descuento
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="contenedor">
+      <a href="../" class="logo">Ks<span>Store</span></a>
+
+      <form class="buscador" action="../productos" method="get" role="search">
+        <input type="search" name="q" placeholder="Busca procesadores, tarjetas de video, RAM..." aria-label="Buscar productos">
+        <button type="submit">Buscar</button>
+      </form>
+
+      <nav class="acciones">
+        <a href="../productos">📦 <span class="txt">Objetos</span></a>
+        <a href="../admin/productos">⚙️ <span class="txt">Gestionar objetos</span></a>
+        <a href="../pagar">🛒 <span class="txt">Carrito</span><span class="badge-carrito" id="contador">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="nav-cat" aria-label="Categorías">
+    <div class="contenedor">
+      <ul>
+        <li><a href="productos.html?cat=1">Procesadores</a></li>
+        <li><a href="productos.html?cat=2">Tarjetas de video</a></li>
+        <li><a href="productos.html?cat=3">Memoria RAM</a></li>
+        <li><a href="productos.html?cat=4">Almacenamiento</a></li>
+        <li><a href="productos.html?cat=5">Tarjetas madre</a></li>
+        <li><a href="productos.html?cat=6">Fuentes de poder</a></li>
+        <li><a href="productos.html?cat=7">Gabinetes</a></li>
+        <li><a href="productos.html?cat=8">Refrigeración</a></li>
+        <li><a href="productos.html?cat=9">Periféricos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="contenedor">
+        <div>
+          <span class="etiqueta">⚡ Nuevos lanzamientos disponibles</span>
+          <h1>Arma el PC de tus sueños con <em>los mejores componentes</em></h1>
+          <p>Procesadores, tarjetas de video, memorias y mucho más, con garantía y asesoría real para que compres con confianza.</p>
+          <div class="hero-botones">
+            <a href="../productos" class="btn btn-primario">Ver catálogo</a>
+            <a href="#destacados" class="btn btn-borde">Productos destacados</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">🖥️</div>
+      </div>
+    </section>
+
+    <div class="contenedor">
+
+      <!-- ===== CATEGORÍAS ===== -->
+      <section class="seccion">
+        <div class="seccion-titulo">
+          <div>
+            <h2>Explora por categoría</h2>
+            <p>Encuentra rápido lo que necesitas</p>
+          </div>
+        </div>
+        <div class="grid-cat">
+          <a class="cat-card" href="productos.html?cat=1"><span class="icono">🧠</span><span>Procesadores</span></a>
+          <a class="cat-card" href="productos.html?cat=2"><span class="icono">🎮</span><span>Tarjetas de video</span></a>
+          <a class="cat-card" href="productos.html?cat=3"><span class="icono">💾</span><span>Memoria RAM</span></a>
+          <a class="cat-card" href="productos.html?cat=4"><span class="icono">💽</span><span>Almacenamiento</span></a>
+          <a class="cat-card" href="productos.html?cat=5"><span class="icono">🧩</span><span>Tarjetas madre</span></a>
+          <a class="cat-card" href="productos.html?cat=6"><span class="icono">🔌</span><span>Fuentes</span></a>
+          <a class="cat-card" href="productos.html?cat=8"><span class="icono">❄️</span><span>Refrigeración</span></a>
+          <a class="cat-card" href="productos.html?cat=9"><span class="icono">🖱️</span><span>Periféricos</span></a>
+        </div>
+      </section>
+
+      <!-- ===== PRODUCTOS DESTACADOS ===== -->
+      <section class="seccion" id="destacados">
+        <div class="seccion-titulo">
+          <div>
+            <h2>Productos destacados</h2>
+            <p>Lo más buscado por nuestros clientes</p>
+          </div>
+          <a href="../productos" class="ver-todo">Ver todo →</a>
+        </div>
+
+        <div class="grid-productos" id="grid-destacados"></div>
+      </section>
+
+      <!-- ===== BANNER CUPÓN ===== -->
+      <section class="banner-cupon">
+        <div>
+          <h2>🎁 10% de descuento en tu primera compra</h2>
+          <p>Aplica el código al finalizar tu pedido (compra mínima $100.000).</p>
+        </div>
+        <div class="codigo">BIENVENIDO10</div>
+      </section>
+
+      <!-- ===== BENEFICIOS ===== -->
+      <section class="beneficios">
+        <div class="beneficio"><span class="icono">🚚</span><div><strong>Envío a todo el país</strong><span>Rápido y asegurado</span></div></div>
+        <div class="beneficio"><span class="icono">🛡️</span><div><strong>Garantía oficial</strong><span>Hasta 5 años según producto</span></div></div>
+        <div class="beneficio"><span class="icono">💳</span><div><strong>Pago seguro</strong><span>Tarjeta, PSE y Nequi</span></div></div>
+        <div class="beneficio"><span class="icono">💬</span><div><strong>Asesoría experta</strong><span>Te ayudamos a elegir</span></div></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div>
+          <a href="../" class="logo">Ks<span>Store</span></a>
+          <p style="margin-top:10px;font-size:.9rem">Tu tienda de confianza para hardware y componentes de computadores en Colombia.</p>
+        </div>
+        <div>
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="../productos">Catálogo</a></li>
+            <li><a href="../admin/productos">Gestionar objetos</a></li>
+            <li><a href="../pagar">Carrito</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>📍 Medellín, Antioquia</li>
+            <li>✉️ hola</li>
+            <li>📞 </li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 KsStore. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
