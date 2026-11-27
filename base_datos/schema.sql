@@ -1,8 +1,3 @@
--- =====================================================================
---  TechStore - Base de datos simplificada
---  Solo lo necesario: catálogo (con CRUD de admin) y pedidos/pago.
---  Compatible con MariaDB 10.5+ y MySQL 8
--- =====================================================================
 DROP DATABASE IF EXISTS tienda_hardware;
 CREATE DATABASE tienda_hardware CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE tienda_hardware;
